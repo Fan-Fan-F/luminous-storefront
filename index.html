@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luminous · 精品商店</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="#">Luminous<span>.</span></a>
+    <div class="search-box">
+      <input id="searchInput" type="search" placeholder="搜索商品、品牌或品类…" autocomplete="off">
+    </div>
+    <button id="cartBtn" class="cart-btn" aria-label="购物车">
+      🛒 <span id="cartCount" class="cart-count">0</span>
+    </button>
+  </div>
+</header>
+
+<nav class="category-bar">
+  <div class="container">
+    <div id="categoryChips" class="chips"></div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="toolbar">
+    <p id="resultInfo" class="result-info"></p>
+    <select id="sortSelect" class="sort-select">
+      <option value="featured">推荐排序</option>
+      <option value="price-asc">价格从低到高</option>
+      <option value="price-desc">价格从高到低</option>
+      <option value="rating">评分最高</option>
+      <option value="newest">最新上架</option>
+    </select>
+  </div>
+  <div id="productGrid" class="product-grid"></div>
+  <p id="emptyState" class="empty-state" hidden>没有找到匹配的商品，换个关键词试试？</p>
+</main>
+
+<aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+  <div class="cart-panel">
+    <div class="cart-header">
+      <h2>购物车</h2>
+      <button id="closeCart" class="icon-btn" aria-label="关闭">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>合计</span>
+        <strong id="cartTotal">¥0.00</strong>
+      </div>
+      <button class="checkout-btn" onclick="alert('演示项目：结算流程请见同系列 checkout-pro 项目')">去结算</button>
+    </div>
+  </div>
+</aside>
+
+<footer class="site-footer">
+  <p>Luminous Storefront · 零依赖原生 JS 电商橱窗演示</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
